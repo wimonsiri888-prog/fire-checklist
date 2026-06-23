@@ -75,6 +75,11 @@ function renderForm() {
     <div class="checklist" id="checklist"></div>
 
     <div class="field-group">
+      <label class="field-label">ชื่อผู้ตรวจสอบ</label>
+      <input type="text" id="inspector" placeholder="กรอกชื่อ-นามสกุล" />
+    </div>
+
+    <div class="field-group">
       <label class="field-label">หมายเหตุ (ถ้ามี)</label>
       <textarea id="remarks" rows="3" placeholder="ระบุรายละเอียดหากพบ ไม่ปกติ"></textarea>
     </div>
@@ -143,6 +148,7 @@ async function submitChecklist() {
     criteria4: answers[4],
     criteria5: answers[5],
     criteria6: answers[6],
+    inspector: document.getElementById('inspector').value.trim(),
     remarks: document.getElementById('remarks').value.trim(),
   };
 
